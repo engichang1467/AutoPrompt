@@ -25,6 +25,14 @@ class Eval:
         self.errors = None
         self.history = []
         self.analyzer = analyzer
+        
+        # Initialize score names and descriptions
+        self.score_descriptions = {
+            "hallucination_score": "Score for hallucination detection",
+            "classification_score": "Score for classification accuracy",
+            "aggregation_score": "Score for information aggregation",
+            "response_quality_score": "Score for response quality"
+        }
 
     @staticmethod
     def get_eval_function(config: dict):
